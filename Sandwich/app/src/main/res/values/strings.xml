@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sandwich</string>
+    <string name="edit_name">Enter your Name</string>
+    <string name="button_Order">Order</string>
+    <string name="rb_white">White</string>
+    <string name="rb_wheat">Whole Wheat</string>
+    <string name="cb_cheese">Cheese</string>
+    <string name="cb_salt">Salt and Pepper</string>
+</resources>

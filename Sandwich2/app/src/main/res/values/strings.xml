@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sandwich2</string>
+    <string name="name">Name:</string>
+    <string name="temp">Temperature</string>
+    <string name="edit_name">Enter your name</string>
+    <string name="rb_White">White</string>
+    <string name="rb_Wheat">Whole wheat</string>
+    <string name="bt_Order">Order</string>
+    <string name="cb_Salt">Salt</string>
+    <string name="cb_cheese">Cheese</string>
+</resources>

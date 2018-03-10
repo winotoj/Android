@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortBy">
+        <item name="name">Name</item>
+        <item name="dest">Destination</item>
+        <item name="date">Departure Date</item>
+    </string-array>
+    <string-array name="sortByValues">
+        <item name="name">name</item>
+        <item name="dest">destination</item>
+        <item name="date">departureDate</item>
+    </string-array>
+</resources>

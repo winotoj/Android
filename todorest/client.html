@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.min.js"></script>
+        <script>
+            function selectItem(itemId){
+                    $.ajax({
+                        url: "/api.php/todos/" + itemId,
+                        type: "GET",
+                        dataType: "json"
+                    }).done(function(todo){
+                        $("#currentId").html(todo.id);
+                        $("input[name=task]").val(todo.task);
+                        $("input[name=dueDate]").val(todo.dueDate);
+                        $("input[name=isDone]").prop('checked', todo.isDone === 'done');
+                        
+                    })
+                }
+            $(document).ready(function(){
+                $(document).ajaxError(function(){
+                   alert("AJAX request failed"); 
+                });
+                refreshTodoList();
+                              
+                function refreshTodoList(){
+                   $.ajax({
+                       url: "/api.php/todos",
+                       type: "GET",
+                       dataType: "json"
+                   }).done(function(todoList){
+                       var result = "<tr><th>#</th><th>Task</th><th>Due Date</th><th>is done</th>\n";
+                       for (var i = 0; i<todoList.length; i++){
+                           var todo = todoList[i];
+                           result +='<tr onclick="selectItem(' + todo.id + ')">';
+                           result +='<td>' + todo.id + '</td>';
+                           result +='<td>' + todo.task + '</td>';
+                           result +='<td>' + todo.dueDate + '</td>';
+                           result +='<td>' + todo.isDone + '</td>';                          
+                       }
+                       $("#listTable").html(result);
+                   }); 
+               }
+               
+               $("#add").click(function(){
+                   var taskVal = $("input[name=task]").val();
+                   var dueDateVal = $("input[name=dueDate").val();
+                   var isDoneVal = $("input[name=isDone").prop('checked')? "done" : "pending";
+                  $.ajax({
+                      url: "/api.php/todos",
+                      type: "POST",
+                      dataType: "json",
+                      data: JSON.stringify({task: taskVal, dueDate: dueDateVal, isDone: isDoneVal})
+                  }).done(function(){
+                     alert("Added succesfully");
+                     refreshTodoList();
+                  }); 
+               });
+               
+                $("#save").click(function(){
+                   var currentId = $("#currentId").text();
+                   var taskVal = $("input[name=task]").val();
+                   var dueDateVal = $("input[name=dueDate").val();
+                   var isDoneVal = $("input[name=isDone").prop('checked')? "done" : "pending";
+                  $.ajax({
+                      url: "/api.php/todos/" + currentId,
+                      type: "PUT",
+                      dataType: "json",
+                      data: JSON.stringify({id: currentId, task: taskVal, dueDate: dueDateVal, isDone: isDoneVal})
+                  }).done(function(){
+                     alert("Modify succesfully");
+                     refreshTodoList();
+                  }); 
+               });
+               $("#delete").click(function(){
+                   var currentId = $("#currentId").text();
+               
+                  $.ajax({
+                      url: "/api.php/todos/" + currentId,
+                      type: "DELETE",
+                      dataType: "json"
+                  }).done(function(){
+                     alert("Delete succesfully");
+                     refreshTodoList();
+                  }); 
+               });
+           });
+           
+        </script>
+    </head>
+    <body>
+        <div id = "centerContent">
+            
+            <table id="listTable" border="1">
+                
+            </table>
+            
+            <div id="viewAddEditPane">
+                Current id: <span id="currentId"></span><br/>
+                Task: <input type="text" name="task"><br/>
+                Due Date: <input type="text" name="dueDate"><br/>
+                Is done: <input type="checkbox" name="isDone"><br/>
+                <button id="save">Save</button>
+                <button id="add">Add</button>
+                <button id="delete">Delete</button>
+            </div>
+            
+        </div>
+    </body>
+</html>

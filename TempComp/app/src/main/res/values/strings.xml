@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Temp Comp</string>
+    <string name="edit_celcius">Enter the temperature</string>
+    <string name="button_convert">To Fahrenheit</string>
+</resources>

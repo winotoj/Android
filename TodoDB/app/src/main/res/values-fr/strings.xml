@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TugasDB</string>
+    <string name="title_delete">an Hapus</string>
+    <string name="msg_delete">apakah benar mau dihapus?</string>
+    <string name="btn_delete">Hapus</string>
+    <string name="btn_cancel">Tunda</string>
+    <string name="et_task">Masukkan tugas</string>
+</resources>

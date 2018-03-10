@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FriendDB.iml" filepath="$PROJECT_DIR$/FriendDB.iml" />
+      <module fileurl="file://C:\androidstudio\FriendDB\FriendDB.iml" filepath="C:\androidstudio\FriendDB\FriendDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\androidstudio\FriendDB\app\app.iml" filepath="C:\androidstudio\FriendDB\app\app.iml" />
+    </modules>
+  </component>
+</project>

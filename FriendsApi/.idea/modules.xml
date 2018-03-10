@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FriendsApi.iml" filepath="$PROJECT_DIR$/FriendsApi.iml" />
+      <module fileurl="file://C:\androidstudio\FriendsApi\FriendsApi.iml" filepath="C:\androidstudio\FriendsApi\FriendsApi.iml" />
+      <module fileurl="file://C:\Users\vseye\Documents\androidcourse\FriendsApi\FriendsApi.iml" filepath="C:\Users\vseye\Documents\androidcourse\FriendsApi\FriendsApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\vseye\Documents\androidcourse\FriendsApi\app\app.iml" filepath="C:\Users\vseye\Documents\androidcourse\FriendsApi\app\app.iml" />
+      <module fileurl="file://C:\androidstudio\FriendsApi\app\app.iml" filepath="C:\androidstudio\FriendsApi\app\app.iml" />
+    </modules>
+  </component>
+</project>

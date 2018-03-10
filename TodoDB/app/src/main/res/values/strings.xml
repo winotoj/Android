@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TodoDB</string>
+    <string name="title_delete">Delete</string>
+    <string name="msg_delete">Are you sure want to delete this task?</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="et_task">Enter a task</string>
+</resources>

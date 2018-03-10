@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qz1Kota</string>
+    <string name="edit_name">Masukkan Nama Kota</string>
+    <string name="edit_pop">Masukkan Populasi</string>
+    <string name="bt_save">Simpan</string>
+    <string name="bt_continue">Terus</string>
+    <string name="bt_delete">Hapus</string>
+</resources>

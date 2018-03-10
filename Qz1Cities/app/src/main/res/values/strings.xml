@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Qz1Cities</string>
+    <string name="edit_name">Enter City Name</string>
+    <string name="edit_pop">Enter Population</string>
+    <string name="bt_save">Save</string>
+    <string name="bt_continue">Continue</string>
+    <string name="bt_delete">Delete</string>
+</resources>
